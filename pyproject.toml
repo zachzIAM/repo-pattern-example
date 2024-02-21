@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "repo-pattern-example"
+name = "repo"
 version = "0.1.0"
 description = ""
 authors = ["Zach Zankov <zach.zankov@gmail.com>"]
@@ -7,7 +7,13 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
+sqlalchemy = "^2.0.27"
+pydantic = "^1.10.7"
+sqlmodel = "^0.0.16"
 
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.1"
+pytest-cov = "^4.1.0"
 
 [build-system]
 requires = ["poetry-core"]
