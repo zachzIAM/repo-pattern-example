@@ -3,7 +3,7 @@ from typing import List
 from sqlalchemy import Column, String
 from sqlmodel import Field, Relationship
 
-from src.repo.model.base_model import BaseModel
+from repo.model.base_model import BaseModel
 
 
 class Team(BaseModel, table=True):

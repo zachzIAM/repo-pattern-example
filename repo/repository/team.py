@@ -2,8 +2,8 @@ from abc import ABC, abstractmethod
 from typing import Optional
 from sqlmodel import Session, select
 
-from src.repo.repository.generic import GenericRepository, GenericSqlRepository
-from src.repo.model.team import Team
+from repo.repository.generic import GenericRepository, GenericSqlRepository
+from repo.model.team import Team
 
 
 class TeamRepositoryBase(GenericRepository[Team], ABC):

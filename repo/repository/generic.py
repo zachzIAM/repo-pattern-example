@@ -4,8 +4,6 @@ from typing import Generic, TypeVar, Type, Optional, List
 from sqlmodel import Session, select, and_
 from sqlmodel.sql.expression import SelectOfScalar
 
-from ..model.team import Team
-from ..model.hero import Hero
 from ..model.base_model import BaseModel
 
 T = TypeVar("T", bound=BaseModel)
