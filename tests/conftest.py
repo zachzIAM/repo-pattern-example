@@ -1,4 +1,7 @@
 import pytest
+
+from repo.model.hero import Hero
+from repo.model.team import Team
 from repo.settings import Settings
 from repo.db import create_sqlmodel_engine, sqlmodel_session_maker
 
@@ -11,3 +14,15 @@ def session_factory():
 
     return session_factory
 
+
+@pytest.fixture(scope="function")
+def session_factory_with_models():
+    db_settings = Settings(database_connection_str="sqlite://")
+    engine = create_sqlmodel_engine(db_settings)
+    session_factory = sqlmodel_session_maker(engine)
+
+    with session_factory() as session:
+        Hero.metadata.create_all(session.get_bind())
+        Team.metadata.create_all(session.get_bind())
+
+    return session_factory

@@ -15,3 +15,10 @@ def test_create_table(session_factory):
         tables = session.execute(text("SELECT * FROM sqlite_master WHERE type='table'"))
 
     assert len(tables.fetchall()) == 1
+
+
+def test_populated_session(session_factory_with_models):
+    with session_factory_with_models() as session:
+        tables = session.execute(text("SELECT * FROM sqlite_master WHERE type='table'"))
+
+    assert len(tables.fetchall()) == 2
