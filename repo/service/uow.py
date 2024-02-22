@@ -1,12 +1,12 @@
 from abc import ABC, abstractmethod
 from typing import Callable
 
-from ..repository.hero import (
+from repo.repository.hero import (
     HeroReposityBase,
     HeroRepository,
 )
 
-from ..repository.team import (
+from repo.repository.team import (
     TeamRepositoryBase,
     TeamRepository,
 )
