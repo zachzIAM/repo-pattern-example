@@ -3,7 +3,7 @@ from typing import Optional
 from sqlmodel import Session, select
 
 from src.repo.repository.generic import GenericRepository, GenericSqlRepository
-from src.repo.schemas import Team
+from src.repo.model.team import Team
 
 
 class TeamRepositoryBase(GenericRepository[Team], ABC):
