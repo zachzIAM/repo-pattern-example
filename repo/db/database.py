@@ -2,7 +2,7 @@ from typing import Callable
 
 from sqlmodel import create_engine, Session
 
-from ..settings import Settings
+from repo.settings import Settings
 
 
 def create_sqlmodel_engine(settings: Settings, **kwargs):
